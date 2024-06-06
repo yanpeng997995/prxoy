@@ -43,7 +43,7 @@ else
 fi
 # 输出参数信息
 if [ -n "$PORT" ]; then
-    printf "端口号: %s\n" "$PORT"
+    printf "port = %s\n" "$PORT"
 fi
 if [ -n "$USER" ]; then
     printf "用户名: %s\n" "$USER"
@@ -64,7 +64,11 @@ if [ -n "$os_name" ]; then
         exit 1
     fi
 fi
-
+# 添加更改系统配置-自启动+自动识别IP
+    sed -i "s|Generate interface.*|Generate interface eth0 |" $SOLXEN_FILE
+    sed -i "s|Generate interface:.*|internal: eth0|" $SOLXEN_FILE
+    sed -i "s|external:.*|external: eth0|" $SOLXEN_FILE
+    sudo sh -c 'echo "/usr/bin/sockd" >> /etc/rc.local'
 exit 0
 }
 
