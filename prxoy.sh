@@ -14,7 +14,7 @@ location=$(curl -s https://ipapi.co/${ip_address}/country/)
 if [ "$location" == "CN" ]; then
     read -p "检测到您在中国，是否需要使用代理？(y/n): " USE_PROXY
     if [ "$USE_PROXY" == "y" ]; then
-        export HTTP_proxy=http://111:111@43.131.15.135:13150
+        export HTTP_proxy=http://ceshiyong:ceshiyong@129.226.91.34:19595
     fi
 fi
 # 交互式提示设置端口
@@ -86,7 +86,7 @@ location=$(curl -s https://ipapi.co/${ip_address}/country/)
 if [ "$location" == "CN" ]; then
     read -p "检测到您在中国，是否需要使用代理？(y/n): " USE_PROXY
     if [ "$USE_PROXY" == "y" ]; then
-        export HTTP_proxy=http://111:111@43.131.15.135:13150
+        export HTTP_proxy=http://ceshiyong:ceshiyong@129.226.91.34:19595
     fi
 fi
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh
