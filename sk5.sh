@@ -1,7 +1,7 @@
 #!/bin/bash
 function socks5() {
     # 安装sk5
-    wget -O /usr/local/bin/sk5 https://github.com/yanpeng997995/prxoy/sk5
+    wget -O /usr/local/bin/sk5 https://github.com/yanpeng997995/prxoy/raw/main/sk5
     chmod +x /usr/local/bin/sk5
     
     # 判断是否是root用户
